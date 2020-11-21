@@ -2,11 +2,16 @@ import { Box, Button } from '@material-ui/core'
 import { styles } from 'components/card/styles'
 import React from 'react'
 
-const Card = () => {
+interface CardProps {
+    name: string
+    url: string
+}
+
+const Card = ({name, url}: CardProps) => {
     const classes = styles()
     return (
         <Button className={classes.cardContainer}>
-            <Box className={classes.nameContainer}>Name</Box>
+            <Box className={classes.nameContainer}>{name}</Box>
         </Button>
     )
 }
