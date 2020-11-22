@@ -14,7 +14,7 @@ export const styles = makeStyles((theme: Theme) => ({
     },
     cardInnerContainer: {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'column-reverse',
         width: '100%',
         height: '100%',
     },
