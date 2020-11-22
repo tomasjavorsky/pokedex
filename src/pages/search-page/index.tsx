@@ -20,7 +20,6 @@ const SearchPage = () => {
     return (
         <Box className={classes.mainContainer}>
             <Header />
-            <DetailModal pokemonId={1} pokemonName={'bulbasaur'} url={'https://pokeapi.co/api/v2/pokemon/1/'}/>
             <SearchBar />
             <Gallery />
             <Footer />
