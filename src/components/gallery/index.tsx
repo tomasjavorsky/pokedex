@@ -12,10 +12,16 @@ const Gallery = () => {
     const visiblePokemonData = useSelector((store) =>
         selectPokemonDataKey(store as ReduxStoreType, offset)
     )
+    console.log(visiblePokemonData)
     const pokemonCards = useMemo(() => {
-        return visiblePokemonData?.map((data) => {
+        return visiblePokemonData?.map((data, index) => {
             return (
-                <Card key={data.name} name={data.name} url={data.detailUrl} />
+                <Card
+                    key={data.name}
+                    name={data.name}
+                    url={data.url}
+                    pokemonId={index + offset + 1}
+                />
             )
         })
     }, [visiblePokemonData])

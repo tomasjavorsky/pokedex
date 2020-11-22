@@ -4,13 +4,19 @@ export const styles = makeStyles((theme: Theme) => ({
     cardContainer: {
         width: '320px',
         height: '400px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        flexDirection: 'column-reverse',
         backgroundColor: 'white',
         borderRadius: '8px',
         margin: theme.spacing(2),
-        padding: '0px'
+        padding: '0px',
+        '& span': {
+            height: '100%',
+        },
+    },
+    cardInnerContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '100%',
+        height: '100%',
     },
     nameContainer: {
         width: '100%',
@@ -23,6 +29,14 @@ export const styles = makeStyles((theme: Theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: '0 0 8px 8px'
+        borderRadius: '0 0 8px 8px',
+    },
+    imageContainer: {
+        marginTop: 'auto',
+        marginBottom: 'auto',
+        '& img': {
+            width: '240px',
+            height: '240px',
+        },
     },
 }))

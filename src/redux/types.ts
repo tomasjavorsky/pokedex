@@ -4,5 +4,5 @@ export interface ReduxStoreType {
 
 export interface PokemonDataBasic {
     name: string
-    detailUrl: string
+    url: string
 }
