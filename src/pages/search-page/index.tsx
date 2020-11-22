@@ -7,6 +7,7 @@ import Gallery from 'components/gallery'
 import { useDispatch } from 'react-redux'
 import { getPokemonListAction } from 'redux/actions'
 import Footer from 'components/footer'
+import DetailModal from 'components/detail-modal'
 
 const SearchPage = () => {
     const classes = styles()
@@ -19,6 +20,7 @@ const SearchPage = () => {
     return (
         <Box className={classes.mainContainer}>
             <Header />
+            <DetailModal pokemonId={1} pokemonName={'bulbasaur'} url={'https://pokeapi.co/api/v2/pokemon/1/'}/>
             <SearchBar />
             <Gallery />
             <Footer />
