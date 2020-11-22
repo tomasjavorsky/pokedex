@@ -4,6 +4,6 @@ export const styles = makeStyles((theme: Theme) => ({
     galerryContainer: {
         display: 'flex',
         flexWrap: 'wrap',
-        width: '1056px'
+        width: '1408px'
     },
 }))

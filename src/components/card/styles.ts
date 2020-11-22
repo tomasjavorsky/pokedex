@@ -19,7 +19,7 @@ export const styles = makeStyles((theme: Theme) => ({
         color: 'white',
         fontFamily: 'Raleway, sans-serif',
         fontSize: '24px',
-        textTransform: 'none',
+        textTransform: 'capitalize',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

@@ -9,6 +9,7 @@ interface CardProps {
 
 const Card = ({name, url}: CardProps) => {
     const classes = styles()
+    //TODO get img
     return (
         <Button className={classes.cardContainer}>
             <Box className={classes.nameContainer}>{name}</Box>
