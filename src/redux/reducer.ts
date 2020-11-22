@@ -2,8 +2,9 @@ import { ActionTypes } from './actions'
 import { ReduxStoreType } from './types'
 
 const initialState: ReduxStoreType = {
-    pokemonData: null,
+    pokemonData: undefined,
     galleryPage: 1,
+    searchQuerry: '',
 }
 
 export default function reducer(
@@ -23,6 +24,19 @@ export default function reducer(
             return {
                 ...state,
                 galleryPage: galleryPage,
+            }
+        }
+        case ActionTypes.SET_SEARCH_QUERRY: {
+            const { searchQuerry } = action.payload
+            return {
+                ...state,
+                searchQuerry: searchQuerry,
+            }
+        }
+        case ActionTypes.CLEAR_SEARCH_QUERRY: {
+            return {
+                ...state,
+                searchQuerry: '',
             }
         }
         default:

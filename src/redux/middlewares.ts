@@ -5,6 +5,7 @@ import {
     getPokemonListFailureAction,
     getPokemonListSuccessAction,
 } from 'redux/actions'
+import { PokemonDataBasic } from './types'
 
 export const getPokemonListMiddleware = (Storeapi: any) => (
     next: any
@@ -14,7 +15,13 @@ export const getPokemonListMiddleware = (Storeapi: any) => (
             const result = await Axios.get(
                 'https://pokeapi.co/api/v2/pokemon?limit=150'
             )
-            Storeapi.dispatch(getPokemonListSuccessAction(result.data.results))
+            const dataWithIndex = result.data.results.map(
+                (element: any, index: number) => ({
+                    ...element,
+                    pokemonId: index + 1,
+                })
+            )
+            Storeapi.dispatch(getPokemonListSuccessAction(dataWithIndex))
         } catch (error) {
             Storeapi.dispatch(getPokemonListFailureAction)
         }
