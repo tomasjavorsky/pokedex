@@ -7,7 +7,7 @@ import { styles } from 'components/header/styles'
 const Header = () => {
     const classes = styles()
     return (
-        <Box className={classes.headerContainer}>
+        <header className={classes.headerContainer}>
             <Box className={classes.logoBox}>
                 <img src={pokedexLogo} alt={'logo'} />
             </Box>
@@ -15,7 +15,7 @@ const Header = () => {
                 <Button>O nás</Button>
                 <Button>Pokémoni</Button>
             </Box>
-        </Box>
+        </header>
     )
 }
 

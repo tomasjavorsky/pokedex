@@ -5,14 +5,15 @@ import React, { useEffect } from 'react'
 import { styles } from 'pages/search-page/styles'
 import Gallery from 'components/gallery'
 import { useDispatch } from 'react-redux'
-import { GetPokemonListAction } from 'redux/actions'
+import { getPokemonListAction } from 'redux/actions'
+import Footer from 'components/footer'
 
 const SearchPage = () => {
     const classes = styles()
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(GetPokemonListAction)
+        dispatch(getPokemonListAction)
     }, [dispatch])
 
     return (
@@ -20,6 +21,7 @@ const SearchPage = () => {
             <Header />
             <SearchBar />
             <Gallery />
+            <Footer />
         </Box>
     )
 }

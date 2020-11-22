@@ -2,8 +2,8 @@ import Axios from 'axios'
 import {
     Actions,
     ActionTypes,
-    GetPokemonListFailureAction,
-    GetPokemonListSuccessAction,
+    getPokemonListFailureAction,
+    getPokemonListSuccessAction,
 } from 'redux/actions'
 
 export const getPokemonListMiddleware = (Storeapi: any) => (
@@ -14,9 +14,9 @@ export const getPokemonListMiddleware = (Storeapi: any) => (
             const result = await Axios.get(
                 'https://pokeapi.co/api/v2/pokemon?limit=150'
             )
-            Storeapi.dispatch(GetPokemonListSuccessAction(result.data.results))
+            Storeapi.dispatch(getPokemonListSuccessAction(result.data.results))
         } catch (error) {
-            Storeapi.dispatch(GetPokemonListFailureAction)
+            Storeapi.dispatch(getPokemonListFailureAction)
         }
     }
     return next(action)

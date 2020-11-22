@@ -1,4 +1,4 @@
-import { Box, Button, Fade } from '@material-ui/core'
+import { Box, Button } from '@material-ui/core'
 import Axios from 'axios'
 import { styles } from 'components/card/styles'
 import React, { Suspense } from 'react'
@@ -34,9 +34,9 @@ const Card = ({ name, url, pokemonId }: CardProps) => {
             <Box className={classes.cardInnerContainer}>
                 <Box className={classes.nameContainer}>{name}</Box>
                 <Suspense fallback={'loading'}>
-                        <Box className={classes.imageContainer}>
-                            <CardImage pokemonId={pokemonId} />
-                        </Box>
+                    <Box className={classes.imageContainer}>
+                        <CardImage pokemonId={pokemonId} />
+                    </Box>
                 </Suspense>
             </Box>
         </Button>

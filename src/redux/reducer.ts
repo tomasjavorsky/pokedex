@@ -3,6 +3,7 @@ import { ReduxStoreType } from './types'
 
 const initialState: ReduxStoreType = {
     pokemonData: null,
+    galleryPage: 1,
 }
 
 export default function reducer(
@@ -15,6 +16,13 @@ export default function reducer(
             return {
                 ...state,
                 pokemonData: pokemonData,
+            }
+        }
+        case ActionTypes.SET_PAGINATION: {
+            const { galleryPage } = action.payload
+            return {
+                ...state,
+                galleryPage: galleryPage,
             }
         }
         default:
