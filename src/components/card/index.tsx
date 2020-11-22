@@ -34,11 +34,9 @@ const Card = ({ name, url, pokemonId }: CardProps) => {
             <Box className={classes.cardInnerContainer}>
                 <Box className={classes.nameContainer}>{name}</Box>
                 <Suspense fallback={'loading'}>
-                    <Fade in>
                         <Box className={classes.imageContainer}>
                             <CardImage pokemonId={pokemonId} />
                         </Box>
-                    </Fade>
                 </Suspense>
             </Box>
         </Button>
