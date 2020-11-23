@@ -16,9 +16,14 @@ interface DetailModalProps {
     closeFunc: () => void
 }
 
-const DetailModal = ({ pokemonId, pokemonName, url,closeFunc }: DetailModalProps) => {
+const DetailModal = ({
+    pokemonId,
+    pokemonName,
+    url,
+    closeFunc,
+}: DetailModalProps) => {
     const [selectedTab, setSelectedTab] = useState(1)
-    const classes = styles()
+    const classes = styles({ offset: window.scrollY })
     const changeTab = useCallback((event: object, value: number) => {
         setSelectedTab(value)
     }, [])
@@ -31,7 +36,6 @@ const DetailModal = ({ pokemonId, pokemonName, url,closeFunc }: DetailModalProps
             <Stat key={s.stat.name} label={s.stat.name} points={s.base_stat} />
         ))
     }, [data])
-    console.log(data)
 
     return (
         <Box className={classes.outerContainer}>

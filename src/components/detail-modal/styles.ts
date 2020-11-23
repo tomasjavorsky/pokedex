@@ -1,17 +1,21 @@
 import { makeStyles, Theme } from '@material-ui/core'
 
-export const styles = makeStyles((theme: Theme) => ({
-    outerContainer: {
+interface StyleProps {
+    offset: number
+}
+
+export const styles = makeStyles<Theme, StyleProps>((theme: Theme) => ({
+    outerContainer: props => ({
         display: 'flex',
         position: 'absolute',
-        top: 0,
+        top: props.offset,
         right: 0,
         justifyContent: 'center',
         alignItems: 'center',
         zIndex: 2,
         width: '100vw',
         height: '100vh',
-    },
+    }),
     mainContainer: {
         display: 'flex',
         flexDirection: 'column',

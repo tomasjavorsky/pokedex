@@ -4,6 +4,10 @@ export const styles = makeStyles((theme: Theme) => ({
     galerryContainer: {
         display: 'flex',
         flexWrap: 'wrap',
-        width: '1408px'
+        maxWidth: '1408px',
+        alignContent: 'center',
+        [theme.breakpoints.down('xs')]: {
+            maxWidth: '352px',
+        }
     },
 }))
