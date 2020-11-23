@@ -1,9 +1,9 @@
 import { Box } from '@material-ui/core'
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import { styles } from 'components/gallery/styles'
 import Card from 'components/card'
 import { useSelector } from 'react-redux'
-import { selectCurrentGalleryPage, selectVisiblePokemonData } from 'redux/selectors'
+import { selectVisiblePokemonData } from 'redux/selectors'
 import { ReduxStoreType } from 'redux/types'
 
 export const CARDS_ON_PAGE = 12

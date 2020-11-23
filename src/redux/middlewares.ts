@@ -5,7 +5,6 @@ import {
     getPokemonListFailureAction,
     getPokemonListSuccessAction,
 } from 'redux/actions'
-import { PokemonDataBasic } from './types'
 
 export const getPokemonListMiddleware = (Storeapi: any) => (
     next: any

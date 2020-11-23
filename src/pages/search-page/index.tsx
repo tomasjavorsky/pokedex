@@ -7,7 +7,6 @@ import Gallery from 'components/gallery'
 import { useDispatch } from 'react-redux'
 import { getPokemonListAction } from 'redux/actions'
 import Footer from 'components/footer'
-import DetailModal from 'components/detail-modal'
 
 const SearchPage = () => {
     const classes = styles()

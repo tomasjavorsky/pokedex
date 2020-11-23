@@ -1,5 +1,4 @@
 import { Box, Button } from '@material-ui/core'
-import Axios from 'axios'
 import { styles } from 'components/card/styles'
 import React, { Suspense, useCallback, useState } from 'react'
 import PokemonPicture from 'components/pokemon-picture'

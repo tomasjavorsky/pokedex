@@ -15,7 +15,7 @@ const SkillsBox = ({ label, skills }: PropertyBoxProps) => {
                 <Typography className={classes.property}>{skill}</Typography>
             </Box>
         ))
-    }, [skills])
+    }, [skills, classes.property])
     return (
         <Box className={classes.container}>
             <Typography className={classes.label}>{label}</Typography>
