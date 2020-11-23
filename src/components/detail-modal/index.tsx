@@ -52,35 +52,37 @@ const DetailModal = ({
                     </Tabs>
                 </Box>
                 <Box className={classes.innerContainer}>
-                    <Box className={classes.imageContainer}>
-                        <Typography className={classes.pokemonName}>
-                            {pokemonName}
-                        </Typography>
-                        <Suspense fallback={'loading'}>
-                            <PokemonPicture pokemonId={pokemonId} />
-                        </Suspense>
-                    </Box>
-                    {selectedTab === 0 && (
-                        <Box>
-                            <PropertyBox
-                                label={'Typ'}
-                                property={data?.types[0].type.name}
-                            />
-                            <PropertyBox
-                                label={'Výška'}
-                                property={data?.height}
-                            />
-                            <PropertyBox
-                                label={'Váha'}
-                                property={data?.weight}
-                            />
-                            <SkillsBox
-                                label={'Dovednosti'}
-                                skills={abilities}
-                            />
+                    <Box className={classes.contentContainer}>
+                        <Box className={classes.imageContainer}>
+                            <Typography className={classes.pokemonName}>
+                                {pokemonName}
+                            </Typography>
+                            <Suspense fallback={'loading'}>
+                                <PokemonPicture pokemonId={pokemonId} />
+                            </Suspense>
                         </Box>
-                    )}
-                    {selectedTab === 1 && <Box>{stats}</Box>}
+                        {selectedTab === 0 && (
+                            <Box className={classes.tab0}>
+                                <PropertyBox
+                                    label={'Typ'}
+                                    property={data?.types[0].type.name}
+                                />
+                                <PropertyBox
+                                    label={'Výška'}
+                                    property={data?.height}
+                                />
+                                <PropertyBox
+                                    label={'Váha'}
+                                    property={data?.weight}
+                                />
+                                <SkillsBox
+                                    label={'Dovednosti'}
+                                    skills={abilities}
+                                />
+                            </Box>
+                        )}
+                        {selectedTab === 1 && <Box>{stats}</Box>}
+                    </Box>
                     <Box className={classes.closeContainer}>
                         <IconButton onClick={closeFunc}>
                             <Close />

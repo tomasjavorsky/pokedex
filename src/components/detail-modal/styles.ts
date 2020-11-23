@@ -33,6 +33,9 @@ export const styles = makeStyles<Theme, StyleProps>((theme: Theme) => ({
         alignItems: 'center',
         backgroundColor: 'white',
         width: '800px',
+        [theme.breakpoints.down('xs')]: {
+            width: '350px',
+        },
         borderRadius: '8px',
         border: '2px solid #e8e8e8'
     },
@@ -69,5 +72,22 @@ export const styles = makeStyles<Theme, StyleProps>((theme: Theme) => ({
         marginTop: theme.spacing(2),
         marginRight: theme.spacing(2),
         marginLeft: 'auto',
+        [theme.breakpoints.down('xs')]: {
+            marginBottom: 'auto',
+            marginTop: 0,
+            marginRight: 0,
+            marginLeft: theme.spacing(-1),
+        },
     },
+    tab0: {
+        marginRight: theme.spacing(1)
+    },
+    contentContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        [theme.breakpoints.down('xs')]: {
+            flexDirection: 'column'
+        },
+    }
 }))

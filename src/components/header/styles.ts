@@ -12,9 +12,15 @@ export const styles = makeStyles((theme: Theme) => ({
     },
     logoBox: {
         marginLeft: '140px',
+        [theme.breakpoints.down('xs')]: {
+            marginLeft: '40px',
+        },
     },
     buttonBox: {
         marginRight: '140px',
+        [theme.breakpoints.down('xs')]: {
+            marginRight: '20px',
+        },
         '& button': {
             fontFamily: 'Raleway, sans-serif',
             fontWeight: '700',

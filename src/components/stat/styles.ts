@@ -7,10 +7,16 @@ export const styles = makeStyles((theme: Theme) => ({
     },
     labelContainer: {
         width: '130px',
+        [theme.breakpoints.down('xs')]: {
+            width: '40px',
+        },
     },
     label: {
         fontWeight: 'bold',
         fontSize: '16px',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '12px',
+        },
         textTransform: 'capitalize',
     },
     statContainer: {
@@ -27,5 +33,10 @@ export const styles = makeStyles((theme: Theme) => ({
         height: '30px',
         width: '250px',
         borderRadius: '8px',
+        [theme.breakpoints.down('xs')]: {
+            height: '20px',
+            width: '150px',
+            borderRadius: '6px',
+        },
     },
 }))

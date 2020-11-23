@@ -4,6 +4,9 @@ export const styles = makeStyles((theme: Theme) => ({
     container: {
         display: 'flex',
         flexDirection: 'column',
+        [theme.breakpoints.down('xs')]: {
+            marginBottom: theme.spacing(2)
+        },
     },
     label: {
         display: 'flex',
