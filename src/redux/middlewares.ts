@@ -12,7 +12,7 @@ export const getPokemonListMiddleware = (Storeapi: any) => (
     if (action.type === ActionTypes.GET_POKEMON_LIST) {
         try {
             const result = await Axios.get(
-                'https://pokeapi.co/api/v2/pokemon?limit=150'
+                'https://pokeapi.co/api/v2/pokemon?limit=151'
             )
             const dataWithIndex = result.data.results.map(
                 (element: any, index: number) => ({
